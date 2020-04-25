@@ -36,7 +36,19 @@ public class Main {
 //        e.calculateTotal();
 
 //        1.8)
-        Task1.Exercise8();
+//        Task1.Exercise8();
 
+////////////////////////////////////////////////////TASK2////////////////////////////////////////////////////
+//        2.1)
+//        Hangman hangman = new Hangman();
+
+//        2.2)
+        Document document = new Document("Title");
+        document.AddText("test document. test test java.     example.test");
+        System.out.println(document.CountWords());
+        System.out.println(document.CountOccurences("test"));
+        document.SetUpperCase();
+        System.out.println(document.getText());
+        System.out.println(document.CountOccurences("test"));
     }
 }
