@@ -142,7 +142,7 @@ public class Task1 {
             if(scanner.hasNextInt()) {
                 tier = scanner.nextInt();
                 for(int i = 0; i < tier; i++) {
-//                    System.out.println(i);
+//                    SolarSystem.out.println(i);
                     if(i == 0)
                         System.out.println(previous);
                     else if(i == 1)
