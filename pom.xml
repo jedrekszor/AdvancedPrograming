@@ -12,6 +12,7 @@
         <module>Task1</module>
         <module>Task2</module>
         <module>Task3</module>
+        <module>Task4</module>
     </modules>
 
     <dependencies>
@@ -30,6 +31,12 @@
         <dependency>
             <groupId>AdvancedPrograming</groupId>
             <artifactId>Task3</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>AdvancedPrograming</groupId>
+            <artifactId>Task4</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

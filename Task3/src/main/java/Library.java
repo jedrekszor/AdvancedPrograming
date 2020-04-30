@@ -15,6 +15,10 @@ public class Library {
         books.add(book);
     }
 
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
     public Book search(int id) {
         for(Book book: books) {
             if(book.getId() == id)
@@ -37,7 +41,7 @@ public class Library {
     public String toString() {
         String result = "";
         for(Book book: books) {
-            result += book.toString();
+            result += book.toString() + "\n";
         }
         return result;
     }

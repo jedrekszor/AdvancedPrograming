@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 ////////////////////////////////////////////////////TASK1////////////////////////////////////////////////////
@@ -12,24 +14,24 @@ public class Main {
 
 //        1.4)
 //        Exercise4 e = new Exercise4();
-//        SolarSystem.out.print(e);
+//        System.out.print(e);
 
 //        1.5)
 //        Exercise5 e = new Exercise5();
-//        SolarSystem.out.print(e);
-//        SolarSystem.out.print("\n");
+//        System.out.print(e);
+//        System.out.print("\n");
 //        e.fillOne();
-//        SolarSystem.out.print(e);
-//        SolarSystem.out.print("\n");
+//        System.out.print(e);
+//        System.out.print("\n");
 //        e.fillAll();
-//        SolarSystem.out.print(e);
+//        System.out.print(e);
 
 //        1.6)
 //        Task1.Exercise6();
 
 //        1.7)
 //        Exercise7 e = new Exercise7(3, 4);
-//        SolarSystem.out.print(e);
+//        System.out.print(e);
 //        e.changeElement(0, 0, 100);
 //        SolarSystem.out.print(e);
 //        e.calculateRows();
@@ -45,23 +47,23 @@ public class Main {
 //        2.2)
 //        Document document = new Document("Title");
 //        document.AddText("test document. test test java.     example.test");
-//        SolarSystem.out.println(document.CountWords());
-//        SolarSystem.out.println(document.CountOccurences("test"));
+//        System.out.println(document.CountWords());
+//        System.out.println(document.CountOccurences("test"));
 //        document.SetUpperCase();
-//        SolarSystem.out.println(document.getText());
-//        SolarSystem.out.println(document.CountOccurences("test"));
+//        System.out.println(document.getText());
+//        System.out.println(document.CountOccurences("test"));
 
 ////////////////////////////////////////////////////TASK3////////////////////////////////////////////////////
 //        3.1)
 //        for(int i = 0; i < 200; i++) {
 //            Product product = new Product(1);
-//            SolarSystem.out.println(product.test());
+//            System.out.println(product.test());
 //        }
 
 //        3.2)
 //        Book book1 = new Book("test1", "authors1");
 //        Book book2 = new Book("test2", "authors2");
-//        SolarSystem.out.println(book1.getId() + " / " + book2.getId());
+//        System.out.println(book1.getId() + " / " + book2.getId());
 
 //        3.3)
 //        Systems d = new Systems();
@@ -122,15 +124,69 @@ public class Main {
 //        System.out.println(t.getNames()); //mostra todos os nomes
 
 //        3.7)
-        Temperaturas temperaturas = new Temperaturas();
-        int [] t1 = { 1, 2, 3, 4, 5, 6, 7}; // min 1 max 7
-        int [] t2 = { 1, 0, 2, 0, 2, 0, 7}; // min 0 max 7
-        int [] t3 = { 1, 4, 2, 5, 2, 3, 7}; // min 1 max 7
-        System.out.println("1");
-        temperaturas.acrescenta(new TemperaturaDiaria(t1, "Aaa", "Coimbra") );
-        System.out.println("2");
-        temperaturas.acrescenta(new TemperaturaDiaria(t2, "Bbb", "Lisboa") );
-        System.out.println("3");
-        temperaturas.acrescenta(new TemperaturaDiaria(t3, "Ccc", "Porto") );
+//        Temperaturas temperaturas = new Temperaturas();
+//        int [] t1 = { 1, 2, 3, 4, 5, 6, 7}; // min 1 max 7
+//        int [] t2 = { 1, 0, 2, 0, 2, 0, 7}; // min 0 max 7
+//        int [] t3 = { 1, 4, 2, 5, 2, 3, 7}; // min 1 max 7
+//        System.out.println("1");
+//        temperaturas.acrescenta(new TemperaturaDiaria(t1, "Aaa", "Coimbra") );
+//        System.out.println("2");
+//        temperaturas.acrescenta(new TemperaturaDiaria(t2, "Bbb", "Lisboa") );
+//        System.out.println("3");
+//        temperaturas.acrescenta(new TemperaturaDiaria(t3, "Ccc", "Porto") );
+
+////////////////////////////////////////////////////TASK3////////////////////////////////////////////////////
+//        4.1)
+//        Library library = new Library("test");
+//        Book book1 = new Book("test1", "authors1");
+//        Book book2 = new Book("test2", "authors2");
+//        library.addBook(book1);
+//        library.addBook(book2);
+//        System.out.println(library);
+
+//        4.2)
+//        Library library = new Library("test");
+//        Book book1 = new Book("test1", "authors1");
+//        OldBook book2 = new OldBook("test2", "authors2", 3);
+//        CurrentBook book3 = new CurrentBook("test3", "authors3", 1234, 12.5f);
+//        library.addBook(book1);
+//        library.addBook(book2);
+//        library.addBook(book3);
+//        System.out.println(library);
+
+//        4.3)
+//        Telefonica telefonica = new Telefonica();
+//        telefonica.readCardsFromTxt("cards.txt");
+//        System.out.println(telefonica);
+//        telefonica.topUpCard(567, 30);
+//        System.out.println(telefonica);
+//        telefonica.registerCall(567, 123, 12);
+//        System.out.println(telefonica);
+
+//        4.4)
+//        World world = new World(8, 8, 2, 7, 150);
+
+//        4.5)
+        Gastronomy gastronomy = new Gastronomy();
+        Italia italia = new Italia(gastronomy);
+        BurgerKing burgerKing = new BurgerKing(gastronomy);
+        GaleriaSabores galeria = new GaleriaSabores(gastronomy);
+
+        while(true) {
+            System.out.println("1 - Vegetarian\n2 - Diet\n3 - Italian\n4 - Fast Food\n5 - General\n6 - Exit");
+            Scanner scanner = new Scanner(System.in);
+            if(scanner.hasNextInt()) {
+                int choice = scanner.nextInt();
+                switch(choice) {
+                    case 1: gastronomy.recommendVegetarian(); break;
+                    case 2: gastronomy.recommendDiet(); break;
+                    case 3: gastronomy.recommendItalian(); break;
+                    case 4: gastronomy.recommendFastFood(); break;
+                    case 5: gastronomy.recommendGeneral(); break;
+                    case 6: return;
+                    default: System.out.println("No such choice");
+                }
+            }
+        }
     }
 }
