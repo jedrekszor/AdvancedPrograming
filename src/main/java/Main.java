@@ -135,7 +135,7 @@ public class Main {
 //        System.out.println("3");
 //        temperaturas.acrescenta(new TemperaturaDiaria(t3, "Ccc", "Porto") );
 
-////////////////////////////////////////////////////TASK3////////////////////////////////////////////////////
+////////////////////////////////////////////////////TASK4////////////////////////////////////////////////////
 //        4.1)
 //        Library library = new Library("test");
 //        Book book1 = new Book("test1", "authors1");
@@ -167,26 +167,34 @@ public class Main {
 //        World world = new World(8, 8, 2, 7, 150);
 
 //        4.5)
-        Gastronomy gastronomy = new Gastronomy();
-        Italia italia = new Italia(gastronomy);
-        BurgerKing burgerKing = new BurgerKing(gastronomy);
-        GaleriaSabores galeria = new GaleriaSabores(gastronomy);
+//        Gastronomy gastronomy = new Gastronomy();
+//        Italia italia = new Italia(gastronomy);
+//        BurgerKing burgerKing = new BurgerKing(gastronomy);
+//        GaleriaSabores galeria = new GaleriaSabores(gastronomy);
+//
+//        while(true) {
+//            System.out.println("1 - Vegetarian\n2 - Diet\n3 - Italian\n4 - Fast Food\n5 - General\n6 - Exit");
+//            Scanner scanner = new Scanner(System.in);
+//            if(scanner.hasNextInt()) {
+//                int choice = scanner.nextInt();
+//                switch(choice) {
+//                    case 1: gastronomy.recommendVegetarian(); break;
+//                    case 2: gastronomy.recommendDiet(); break;
+//                    case 3: gastronomy.recommendItalian(); break;
+//                    case 4: gastronomy.recommendFastFood(); break;
+//                    case 5: gastronomy.recommendGeneral(); break;
+//                    case 6: return;
+//                    default: System.out.println("No such choice");
+//                }
+//            }
+//        }
 
-        while(true) {
-            System.out.println("1 - Vegetarian\n2 - Diet\n3 - Italian\n4 - Fast Food\n5 - General\n6 - Exit");
-            Scanner scanner = new Scanner(System.in);
-            if(scanner.hasNextInt()) {
-                int choice = scanner.nextInt();
-                switch(choice) {
-                    case 1: gastronomy.recommendVegetarian(); break;
-                    case 2: gastronomy.recommendDiet(); break;
-                    case 3: gastronomy.recommendItalian(); break;
-                    case 4: gastronomy.recommendFastFood(); break;
-                    case 5: gastronomy.recommendGeneral(); break;
-                    case 6: return;
-                    default: System.out.println("No such choice");
-                }
-            }
-        }
+////////////////////////////////////////////////////TASK5////////////////////////////////////////////////////
+//        5.1)
+//        Elevator elevator = new Elevator();
+
+//        5.2)
+        Game game = Game.getInstance();
+        game.start();
     }
 }
